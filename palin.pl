@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 use strict;
-use bignum;
+use bigint;
 
 sub mirror {
 	my $num = shift;
