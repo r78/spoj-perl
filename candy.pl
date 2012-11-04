@@ -12,9 +12,6 @@ while (<>) {
 	chomp($_);
 	if ($i == 0) {
 		if ($packets != 0) {
-			for (1 .. scalar(@candies) - 1) {
-				$total += $candies[$_];
-			}
 			#can we reassign the candies?
 			if ($total % $packets == 0) {
 				my $mean = $total / $packets;	
@@ -40,6 +37,7 @@ while (<>) {
 	else {
 		if ($i > 0) {
 			$candies[$i] = $_;
+			$total += $_;
 			$i--;
 		}
 	}
